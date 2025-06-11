@@ -289,25 +289,35 @@ body{
 }
 
 /* tampilan hp */
-@media (max-width: 768px) {
-  .form-wrapper {
-    flex-direction: column;
-    align-items: stretch;
-  }
+.form-box {
+  background-color: rgba(255, 255, 255, 0.05); /* semi-transparan hitam/putih */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
 
-  .garis-pemisah {
-    display: none; /* garis tengah dihilangkan */
-  }
+/* Buat input lebih nyaman */
+.form-box input[type="text"],
+.form-box input[type="date"],
+.form-box textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-  .form-kiri, .form-kanan {
-    width: 100%;
-  }
+/* Responsif di HP */
+.form-box {
+  background-color: rgba(255, 255, 255, 0.05); /* semi-transparan hitam/putih */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
 
-  .form-section {
-    padding: 30px 20px; /* biar tidak mepet di sisi */
-  }
-
-  .form-kiri input[type="submit"] {
-    width: 100%;
-  }
+/* Buat input lebih nyaman */
+.form-box input[type="text"],
+.form-box input[type="date"],
+.form-box textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
