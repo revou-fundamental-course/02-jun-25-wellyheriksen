@@ -35,8 +35,9 @@ body{
 .logo{
     height: 50px;
     width: 50px;
-    background-image: url();
+    background-image: url(https://picsum.photos/1080/400?random);
     border-radius: 50%;
+    background-size: cover;
 
 }
 
@@ -149,5 +150,164 @@ body{
     }
 }
 
+/* main content */
+.main-content {
+  padding: 100px 40px 50px 40px;
+  text-align: left;
+  background-size: cover;
+  color: #fff;
+}
 
 
+.main-content .form-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  border: 1px solid;
+  background-color: #3a3a2f;
+}
+
+.main-content .form-section form,
+.main-content .form-section div {
+  width: 100%;
+}
+
+.img-slideshow {
+  width: 100%;
+}
+
+/* profile section */
+.profile-section, .achievement-section {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.profile-section h2,
+.achievement-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.achievement-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* tombol slide */
+.slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.slide-button.left {
+  left: 20px;
+}
+
+.slide-button.right {
+  right: 20px;
+}
+
+.slide-button:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* form section */
+.form-section {
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: white;
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-kiri, .form-kanan {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-kiri input[type="text"],
+.form-kiri input[type="date"],
+.form-kiri textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: none;
+}
+
+.form-kiri input[type="submit"] {
+  background-color: #0099ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.garis-pemisah {
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 100%;
+}
+
+.output-table {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-collapse: collapse;
+}
+
+.output-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* tampilan hp */
+@media (max-width: 768px) {
+  .form-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .garis-pemisah {
+    display: none; /* garis tengah dihilangkan */
+  }
+
+  .form-kiri, .form-kanan {
+    width: 100%;
+  }
+
+  .form-section {
+    padding: 30px 20px; /* biar tidak mepet di sisi */
+  }
+
+  .form-kiri input[type="submit"] {
+    width: 100%;
+  }
+}
